@@ -2,31 +2,38 @@
 /*
  * 
  * LG gui by Eric Blackburn
- * 
+ * auto loaded by the landing gear system and pushed into the landing gear virtual control dom.
+ *
+ *
  */ 
 global $_LG;
 
 // this is basically our entire view controller for our stuff.
 class LG_Gui {
 	
-	
-	
+	// begin our private dom variables
 	private $css_links = array(); //
 	private $js_links = array();
 	
+	// our gui template name
 	private $gui_template = 'dark';
 	
+	// our gui template directory path.
 	private $gui_template_url = '';
 	
+	// gui body dom array
 	private $gui_body = array();
 	
+	// different gui parts dom arrays
 	private $gui_modals = array();
 	private $gui_header = array();
 	private $gui_window = array();
 	
+	// final bits
 	private $GUI_array  = array(); // this is the complete body
 	private $GUI_string = '';
 	
+	// more dom space.some may be possibly obsolete
 	private $gui_Header = array();
 	private $gui_JScripts = array();
 	private $gui_Modal_Space = array();
@@ -34,29 +41,32 @@ class LG_Gui {
 	private $gui_Body_Space = array();
 	private $gui_Golden_Space = array();
 	private $gui_Footer_Space = array();
-	
-	
+
 	//private $first_time = $_C
 	
-	
+	// our construction function
 	public function __construct() {
-		
 		global $_LG;
 		
-		
+		// set the gui template directory.
 		$this->gui_template_url = "templates/". $this->gui_template;
 
-		$this->Build_CSS_Links_Array(); // lets build the array for holding our template data based on the config.
+		 // lets build the dom array for holding our template data based on the config.
+		$this->Build_CSS_Links_Array();
+
+		// lets build the dom array for holding our JS links data based on the config.
 		$this->Build_JS_Links_Array();
 		
-		$_Header       = $this->Build_Header();
-		$_JScripts     = $this->Build_Jscripts();
-		$_Modal_Space  = $this->Build_Modal_Space();
-		$_Menu_Space   = $this->Build_Menu_Space();
-		$_Body_Space   = $this->Build_Body_Space();
-		$_Golden_Space = $this->Build_Golden_Space();
-		$_Footer_Space = $this->Build_Footer_Space();
+		// more array dom building
+		$_Header		= $this->Build_Header();
+		$_JScripts		= $this->Build_Jscripts();
+		$_Modal_Space	= $this->Build_Modal_Space();
+		$_Menu_Space	= $this->Build_Menu_Space();
+		$_Body_Space	= $this->Build_Body_Space();
+		$_Golden_Space	= $this->Build_Golden_Space();
+		$_Footer_Space	= $this->Build_Footer_Space();
 		
+		// set all that to smarty template variables for our main body parts
 		$_LG['Smarty']->assign("Header", $_Header);
 		$_LG['Smarty']->assign("JScripts", $_JScripts);
 		$_LG['Smarty']->assign("Modal_Space", $_Modal_Space);
@@ -64,8 +74,7 @@ class LG_Gui {
 		$_LG['Smarty']->assign("Body_Space", $_Body_Space);
 		$_LG['Smarty']->assign("Golden_Space", $_Golden_Space);
 		$_LG['Smarty']->assign("Footer_Space", $_Footer_Space);
-		
-		
+
 		//$_LG['Smarty']->display($this->gui_template_url ."/index.tpl");
 		
 	}
