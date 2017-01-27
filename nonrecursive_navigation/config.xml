@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<installer version="1.0">
+  <info>
+	<uid>non_recursive_navigation</uid>
+	<type>plugins</type>
+	<folder>nonrecursive_navigation</folder>
+	<name><![CDATA[NonRecursive Navigation]]></name>
+	<description><![CDATA[This plugin is designed to allow the user a wider range of editing power to the navigation elements of cubecart.]]></description>
+	<version>1.0.0</version>
+	<minVersion>5.0.0a</minVersion>
+	<maxVersion>6.0.*</maxVersion>
+	<creator><![CDATA[CrankBulb Studios]]></creator>
+	<homepage><![CDATA[http://www.google.com]]></homepage>
+  </info>
+  
+  <hooks>
+	<hook trigger="admin.navigation" enabled="1"><![CDATA[Navigation Menu Item.]]></hook>
+	<hook trigger="admin.nr_navigation" enabled="1"><![CDATA[Admin NRNavigation Editor Page.]]></hook>
+	<hook trigger="controller.index" enabled="1"><![CDATA[Front end page NRNavigation loader.]]></hook>
+  </hooks>
+</installer>

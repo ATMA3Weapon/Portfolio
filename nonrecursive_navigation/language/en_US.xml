@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language version="1.0">
+	<info>
+		<title>en_US</title>
+		<code>en_US</code>
+		<character_set>utf-8</character_set>
+		<version>1.0.0</version>
+		<minVersion>5.0.0</minVersion>
+		<maxVersion>6.*.*</maxVersion>
+	</info>
+	<translation>
+	<string>
+		<name>NonRecursive Navigation Plugin</name>
+		<value><![CDATA[NonRecursive Navigation Plugin]]></value>
+		<type>nonrecursive_navigation</type>
+	</string>
+	<string>
+		<name>A plug-in designed to replace the default {$NAVIGATION} for something that is nonrecursive allowing a wider editing power.</name>
+		<value><![CDATA[A plug-in designed to replace the default {$NAVIGATION} for something that is nonrecursive allowing a wider editing power.]]></value>
+		<type>nonrecursive_navigation</type>
+	</string>
+	<string>
+		<name>Counter Preview</name>
+		<value><![CDATA[Counter Preview]]></value>
+		<type>nonrecursive_navigation</type>
+	</string>
+	<string>
+		<name>Visitor Stats Plugin</name>
+		<value><![CDATA[Visitor Stats Plugin]]></value>
+		<type>nonrecursive_navigation</type>
+	</string>
+	<string>
+		<name>View Stats</name>
+		<value><![CDATA[View Stats]]></value>
+		<type>nonrecursive_navigation</type>
+	</string>
+	</translation>
+</language>

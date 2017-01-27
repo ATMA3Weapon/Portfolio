@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions version="1.0">
+ <group name="nonrecursive_navigation">
+  <string name="module_title"><![CDATA[NonRecursive Navigation Plugin]]></string>
+  <string name="module_description"><![CDATA[A plug-in designed to replace the default {$NAVIGATION} for something that is nonrecursive allowing a wider editing power.]]></string>
+  <string name="preview"><![CDATA[Counter Preview]]></string>
+  <string name="top_level_admin_menu"><![CDATA[Visitor Stats Plugin]]></string>
+  <string name="child_admin_menu"><![CDATA[View Stats]]></string>
+
+ </group>
+</definitions>
